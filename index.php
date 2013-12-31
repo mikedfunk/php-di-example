@@ -1,9 +1,16 @@
 <?php
+
+use DI\Definition\FileLoader\YamlDefinitionFileLoader;
+
 // composer autoload
 require 'vendor/autoload.php';
 
 // instantiate the container
 $container = new DI\Container();
+
+// apply YAML config file to configure the implementation of BarInterface as
+// the Bar class
+$container->addDefinitionsFromFile(new YamlDefinitionFileLoader('config/di.yml'));
 
 // instantiate this class with any type hint dependencies resolved. Since Foo
 // depends on Bar in the Foo construct, the $container will inject that class

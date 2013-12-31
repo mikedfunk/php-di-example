@@ -1,0 +1,2 @@
+MikeFunk\Test\BarInterface:
+    class: MikeFunk\Test\Bar

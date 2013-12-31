@@ -20,11 +20,12 @@ class Foo
     protected $bar;
 
     /**
-     * inject Bar into $bar and then $this->bar with type hinting
+     * inject Bar into $bar and then $this->bar with type hinting. The Bar
+     * class is bound to the BarInterface in config/di.yml
      *
      * @return void
      */
-    public function __construct(Bar $bar)
+    public function __construct(BarInterface $bar)
     {
         $this->bar = $bar;
     }

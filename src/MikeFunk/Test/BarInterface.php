@@ -6,20 +6,17 @@
 namespace MikeFunk\Test;
 
 /**
- * Bar
+ * BarInterface
  *
  * @author Michael Funk <mfunk@internetbrands.com>
  */
-class Bar implements BarInterface
+interface BarInterface
 {
 
     /**
-     * just returns a hardcoded string
+     * returnMe
      *
      * @return string
      */
-    public function returnMe()
-    {
-        return 'This is from the bar class';
-    }
+    public function returnMe();
 }
